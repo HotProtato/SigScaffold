@@ -17,7 +17,6 @@ A lightweight Python tool to derive structured information from the signatures o
 ```bash
 pip install sig-scaffold
 ```
-*(Note: This assumes the package is published to PyPI with this name.)*
 
 ## Usage
 
@@ -66,15 +65,3 @@ print(f"\nRequired Parameters: {required}")
 defaults = scaffold.generate_defaults()
 print(f"\nGenerated Defaults: {defaults}")
 # Expected output: {'db_config': '', 'timeout': 30}
-
-```
-
-## Running Tests
-
-To run the included test suite, clone the repository and run:
-
-```bash
-python -m unittest discover tests
-```
-
-```
