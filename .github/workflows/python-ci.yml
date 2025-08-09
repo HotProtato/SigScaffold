@@ -1,0 +1,22 @@
+# The name that appears on GitHub
+name: Python CI
+
+# When the workflow should run
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+# The actual steps to perform
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+    - name: Run tests
+      run: python -m unittest discover tests
