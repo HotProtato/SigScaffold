@@ -1,14 +1,11 @@
-# The name that appears on GitHub
 name: Python CI
 
-# When the workflow should run
 on:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
-# The actual steps to perform
 jobs:
   build:
     runs-on: ubuntu-latest
